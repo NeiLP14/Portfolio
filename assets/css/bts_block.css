@@ -1,0 +1,62 @@
+/* ===== Section BTS ===== */
+.bts-section {
+    margin: 60px 0;
+    padding: 20px;
+}
+
+.bts-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.bts-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== Cartes SISR / SLAM ===== */
+.bts-options {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bts-card {
+    flex: 1 1 320px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --------- SISR (blanc + noir) --------- */
+.sisr-card {
+    background: #e2e2e2;
+    color: #494949;
+    border-left: 6px solid #d32f2f;
+}
+
+/* --------- SLAM (noir + blanc) --------- */
+.slam-card {
+    background: #ffffff;
+    color: #111;
+    border-left: 6px solid #ff1e1e;
+}
+
+/* Titres */
+.bts-card h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Effet hover */
+.bts-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
