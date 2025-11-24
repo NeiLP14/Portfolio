@@ -1,0 +1,82 @@
+.intro-presentation {
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Permet l’adaptation sur petits écrans */
+}
+
+/* Texte */
+.intro-text {
+    flex: 1;
+    text-align: center;
+    min-width: 280px; /* Empêche le texte de devenir trop étroit */
+}
+
+.intro-text h1 {
+    font-size: 40px;
+}
+
+.intro-text p {
+    font-size: 22px;
+}
+
+/* Image */
+.intro-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.intro-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ----------------------------- */
+/* 📱 Écrans mobiles */
+/* ----------------------------- */
+@media (max-width: 768px) {
+    .intro-presentation {
+        flex-direction: column; 
+        padding: 40px 15px;
+        gap: 25px;
+    }
+
+    .intro-text h1 {
+        font-size: 32px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+
+    .intro-img img {
+        max-width: 320px;
+    }
+}
+
+/* ----------------------------- */
+/* 🖥️ Très grands écrans (moniteurs larges) */
+/* ----------------------------- */
+@media (min-width: 1400px) {
+    .intro-presentation {
+        padding: 80px 10%;
+    }
+
+    .intro-text h1 {
+        font-size: 50px;
+    }
+
+    .intro-text p {
+        font-size: 24px;
+    }
+
+    .intro-img img {
+        max-width: 550px;
+    }
+}

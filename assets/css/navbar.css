@@ -1,0 +1,274 @@
+/* ---------------- HEADER ---------------- */
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    font-size: 14px;
+    background-color: #111;
+    color: #fff;
+}
+
+
+
+
+/* --- Logo animé --- */
+.logo {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+}
+
+/* Texte normal */
+.logo .text-main {
+    display: block;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Texte "hope" placé en dessous */
+.logo .text-hover {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* --- Hover: monte + remplace --- */
+.logo:hover .text-main {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.logo:hover .text-hover {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.logo span {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+.header svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.header svg:hover {
+    fill: red;
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+
+/* ---- MENU LATERAL ---- */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -550px;
+    width: 550px;
+    height: 100vh;
+    background: #e2e2e2;
+    color: #111;
+    padding: 40px 40px;
+    overflow-y: auto;
+    transition: right 0.4s ease;
+    z-index: 200;
+    font-family: "Helvetica", sans-serif;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+/* bouton fermer */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #111;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+
+/* ---- BLOCS DU MENU ---- */
+.menu-block {
+    padding: 40px 0;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.menu-number {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-content a {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Titre du bloc */
+.menu-content a.menu-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.menu-content a:hover {
+    opacity: 1;
+}
+
+
+/* ---- OVERLAY ---- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    z-index: 150;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ----------------------------- */
+/* 📱 MOBILE (max 768px) */
+/* ----------------------------- */
+@media (max-width: 768px) {
+
+    /* header plus compact */
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header .logo {
+        font-size: 26px;
+        letter-spacing: 3px;
+    }
+
+    .menu {
+        font-size: 28px;
+    }
+
+    /* menu plein écran */
+    .side-menu {
+        width: 100%;
+        right: -100%;
+        padding: 60px 25px;
+    }
+
+    .side-menu.open {
+        right: 0;
+    }
+
+    /* bouton X plus grand */
+    .close-btn {
+        top: 25px;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* blocs verticaux */
+    .menu-block {
+        flex-direction: column;
+        gap: 12px;
+        padding: 30px 0;
+    }
+
+    .menu-number {
+        font-size: 38px;
+        text-align: left;
+    }
+
+    .menu-title {
+        font-size: 24px;
+    }
+
+    .menu-content a {
+        font-size: 18px;
+    }
+}
+
+
+/* ----------------------------- */
+/* 🖥 GRAND ÉCRAN (+1400px) */
+/* ----------------------------- */
+@media (min-width: 1400px) {
+
+    .header {
+        padding: 25px 60px;
+        font-size: 16px;
+    }
+
+    .header .logo {
+        font-size: 34px;
+        letter-spacing: 6px;
+    }
+
+    .side-menu {
+        width: 550px;
+        padding: 50px 50px;
+    }
+
+    .menu-number {
+        font-size: 54px;
+    }
+
+    .menu-content a.menu-title {
+        font-size: 32px;
+    }
+
+    .menu-content a {
+        font-size: 18px;
+    }
+}

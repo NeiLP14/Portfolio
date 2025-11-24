@@ -1,0 +1,25 @@
+@import url("navbar.css");
+@import url("intro.css");
+@import url("accueil.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+}
+
+main {
+    padding-top: 80px; 
+}
+
+body {
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.bg-light {
+    background-color: #eee;
+    color: #111;
+}
