@@ -1,6 +1,7 @@
 @import url("navbar.css");
 @import url("intro.css");
 @import url("accueil.css");
+@import url("bts_block.css");
 
 * {
     margin: 0;

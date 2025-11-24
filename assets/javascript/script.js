@@ -26,20 +26,3 @@ closeBtn.addEventListener('click', () => {
     sideMenu.classList.remove('open');
     overlay.classList.remove('active');
 });
-
-
-/*
-const texte = document.getElementById("cp-wiki");
-
-let timer; 
-
-// Quand la souris entre sur le texte
-texte.addEventListener("mouseenter", () => {
-    timer = setTimeout(() => {
-        window.location.href = "https://fr.wikipedia.org/wiki/Cyberpunk_2077", "_blank";
-    }, 20770);
-});
-
-texte.addEventListener("mouseleave", () => {
-    clearTimeout(timer); // annule la redirection
-}); */
