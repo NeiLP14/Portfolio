@@ -76,8 +76,11 @@
     border-left-color: #ff3b3b;
 }
 
-/* SPAN = Badge rouge stylé */
+/* STYLE DU BADGE (span) */
 .apropos-list li span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* espace entre icône et texte */
     background: #d32f2f;
     color: #fff;
     padding: 6px 12px;
@@ -88,6 +91,16 @@
     box-shadow: 0 3px 6px rgba(211, 47, 47, 0.35);
     transition: 0.25s ease;
 }
+
+/* STYLE DES ICONES SVG */
+.apropos-list li span svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;            /* Icône blanche pour contraster */
+    flex-shrink: 0;        /* Empêche la déformation */
+    display: block;        /* Supprime les espaces fantômes */
+}
+
 
 /* Span hover */
 .apropos-list li:hover span {
