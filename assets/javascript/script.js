@@ -52,19 +52,3 @@ document.querySelectorAll(".popup").forEach(popup => {
     });
 });
 
-
-
-/*
-Cette option forme à la gestion des infrastructures réseaux et systèmes.
-L’étudiant apprend à installer, configurer et sécuriser serveurs et postes.
-Il administre réseaux locaux, VLAN, VPN et services essentiels (web, mail, sauvegarde).
-Les outils utilisés incluent Linux, Windows Server, Active Directory et firewalls.
-*/
-
-/* 
-L’option SLAM est centrée sur le développement d’applications web et logicielles.
-Elle enseigne la création d’interfaces, la gestion de bases de données et les bonnes pratiques.
-Les technologies étudiées incluent HTML, CSS, JS, PHP, Python et SQL.
-L’accent est mis sur l’analyse des besoins, la sécurité et la gestion de projet.
-*/
-
