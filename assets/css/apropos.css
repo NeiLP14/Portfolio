@@ -1,23 +1,26 @@
-.apropos-container p {
-    font-size: 20px;
-    line-height: 1.6;
-    text-align: center;
-}
-
+/* CONTAINER GLOBAL */
 .apropos-container {
     max-width: 1000px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
+    padding: 20px;
 }
 
-/* Titre */
+/* PARAGRAPHES GÉNÉRAUX */
+.apropos-container p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* TITRE */
 .apropos-container h2 {
     font-size: 48px;
     text-align: center;
     color: #d32f2f;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 /* LAYOUT PRINCIPAL */
@@ -28,71 +31,94 @@
     gap: 40px;
 }
 
-/* INTRO À GAUCHE */
+/* INTRO GABARIT */
 .apropos-intro {
     flex: 1;
     font-size: 20px;
-    line-height: 1.6;
-    text-align: left;      /* aligné à gauche */
+    color: #444;
+    line-height: 1.7;
+    text-align: left;
 }
 
-/* BOX À DROITE */
+/* BOX SANS CADRE — STYLE NOIR & ROUGE */
 .apropos-box {
     flex: 1;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
+    padding: 10px 0;
+    border-radius: 0;
+    background: transparent; /* plus de cadre */
 }
 
-.apropos-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
-}
-
-.apropos-box p {
-    font-size: 18px;
-    text-align: justify;
-}
-
-/* Sous-titre box */
-.apropos-box h3 {
-    margin-top: 20px;
-    font-size: 22px;
-    color: #d32f2f;
-}
-
-/* LISTE PLUS PROPRE */
+/* LISTE — Style sombre */
 .apropos-list {
     list-style: none;
     padding: 0;
-    margin-top: 15px;
+    margin: 0;
 }
 
 .apropos-list li {
-    background: #f8f8f8;
-    padding: 12px 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    background: #111;                 /* fond sombre */
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 14px;
     font-size: 18px;
     display: flex;
-    gap: 10px;
     align-items: center;
-    transition: 0.2s;
+    gap: 14px;
+    color: #eee;
+    transition: 0.25s ease;
+    border-left: 4px solid #d32f2f;   /* accent rouge */
 }
 
+/* Hover */
 .apropos-list li:hover {
-    background: #ffeaea;
+    background: #111;
+    transform: translateX(6px);
+    border-left-color: #ff3b3b;
 }
 
-/* Responsive */
+/* SPAN = Badge rouge stylé */
+.apropos-list li span {
+    background: #d32f2f;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 3px 6px rgba(211, 47, 47, 0.35);
+    transition: 0.25s ease;
+}
+
+/* Span hover */
+.apropos-list li:hover span {
+    background: #ff2a2a;
+    box-shadow: 0 4px 8px rgba(255, 40, 40, 0.45);
+}
+
+/* Intro plus sombre */
+.apropos-intro {
+    color: #ddd;
+}
+
+/* Titre */
+.apropos-container h2 {
+    color: #d32f2f;
+    text-shadow: 0 0 6px rgba(211, 47, 47, 0.25);
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .apropos-content {
         flex-direction: column;
+        gap: 30px;
     }
+
     .apropos-intro,
     .apropos-box {
         text-align: center;
+    }
+
+    .apropos-list li {
+        justify-content: center;
     }
 }
