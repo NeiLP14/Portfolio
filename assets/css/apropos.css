@@ -1,0 +1,98 @@
+.apropos-container p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.apropos-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Titre */
+.apropos-container h2 {
+    font-size: 48px;
+    text-align: center;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* LAYOUT PRINCIPAL */
+.apropos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* INTRO À GAUCHE */
+.apropos-intro {
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;      /* aligné à gauche */
+}
+
+/* BOX À DROITE */
+.apropos-box {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.apropos-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
+}
+
+.apropos-box p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Sous-titre box */
+.apropos-box h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #d32f2f;
+}
+
+/* LISTE PLUS PROPRE */
+.apropos-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.apropos-list li {
+    background: #f8f8f8;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.apropos-list li:hover {
+    background: #ffeaea;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .apropos-content {
+        flex-direction: column;
+    }
+    .apropos-intro,
+    .apropos-box {
+        text-align: center;
+    }
+}

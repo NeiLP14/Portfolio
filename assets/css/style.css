@@ -2,6 +2,7 @@
 @import url("intro.css");
 @import url("accueil.css");
 @import url("bts_block.css");
+@import url("apropos.css");
 
 * {
     margin: 0;
