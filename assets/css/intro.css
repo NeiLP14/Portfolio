@@ -15,8 +15,20 @@
 }
 
 .intro-text h1 {
-    font-size: 40px;
+    color: #fff;
+    font-size: 42px;
+    text-shadow: 
+        0 0 8px #d32f2f,
+        0 0 14px #d32f2f,
+        0 0 24px #9f0000;
+    animation: pulse 1.8s infinite ease-in-out;
 }
+
+@keyframes pulse {
+    0%, 100% { text-shadow: 0 0 8px #d32f2f; }
+    50% { text-shadow: 0 0 18px #ff4d4d; }
+}
+
 
 .intro-text p {
     font-size: 22px;
