@@ -1,0 +1,87 @@
+.competences-section {
+  padding: 60px 10%;
+}
+
+.competences-section h2 {
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+  position: static;
+  color: #111;
+}
+
+.competences-section h2::after {
+  content: none;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #ffdd55);
+  border-radius: 4px;
+}
+
+.competences-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.competence-block {
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #d4af37;
+  padding: 20px 25px;
+  border-radius: 10px;
+  flex: 1 1 280px;
+  min-width: 280px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.competence-block:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.competence-block h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #d4af37;
+  letter-spacing: 1px;
+}
+
+.competence-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.competence-block ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  opacity: 0.85;
+  position: relative;
+  padding-left: 22px;
+}
+
+/* Petit point doré avant chaque compétence */
+.competence-block ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background: #d4af37;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competences-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
