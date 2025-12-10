@@ -49,7 +49,7 @@
     transition: 0.25s ease;
 }
 
-.footer-col a:hover {
+.footer-col a:hover(.footer-socials):hover {
     color: #ff3b3b;
     transform: translateX(6px);
 }
