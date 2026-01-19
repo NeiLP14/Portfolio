@@ -1,6 +1,5 @@
 TODO :
 
-- Info BTS
 - Stage première année
 - Alternance deuxième année
 
