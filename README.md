@@ -1,6 +1,5 @@
 TODO :
 
-- Info stages collèges et lycée 
 - Info BTS
 - Stage première année
 - Alternance deuxième année
