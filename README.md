@@ -6,4 +6,4 @@ TODO :
 
 - Projet 1 : Portfolio
 - Projet 2 : W2G
-- Arcamony 
+- The Cover Game
