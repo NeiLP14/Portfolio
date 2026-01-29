@@ -1,0 +1,173 @@
+/* -------------------------------------------- */
+/* PROJETS – STYLE CINÉMATIQUE */
+/* -------------------------------------------- */
+
+#projets {
+    padding: 90px 10%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+}
+
+#projets h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Carte */
+.project-card {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 14px;
+    background: #000;
+}
+
+/* Image plein cadre */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.05);
+    transition: transform 0.6s ease;
+}
+
+/* Overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.25),
+            transparent
+        );
+    transition: background 0.4s ease;
+}
+
+/* Titre */
+.project-overlay h3 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+/* Sous-titre */
+.project-overlay span {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d4af37;
+}
+
+/* Hover */
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.project-card:hover .project-overlay {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.4),
+            transparent
+        );
+}
+
+/* Ligne graphique */
+.project-card::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 60px;
+    height: 3px;
+    background: #d32f2f;
+}
+
+/* -------------------------------------------- */
+/* POPUP – DOSSIER PROJET */
+/* -------------------------------------------- */
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #0b0b0b;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: popupSlide 0.4s ease;
+}
+
+/* Header image */
+.popup-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Texte */
+.popup-content .popup-text {
+    padding: 35px 40px;
+}
+
+.popup-content h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.popup-content p {
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+/* Accent */
+.popup-content h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #d4af37, #d32f2f);
+}
+
+/* Close */
+.popup .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+

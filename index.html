@@ -250,7 +250,6 @@
             </section>
 
 
-            <!-- POUR LE CSS CHANGER LE HOVER -->
             <section class="scolarite">
                 <div id="parcours">
                     <h2>PARCOURS</h2>
@@ -312,26 +311,71 @@
             </section>
 
             <section id="projets" class="bg-light">
+                <h2>MES PROJETS</h2>
 
-                <div id="projet1">
-                    <h2>PROJEKT 1</h2>
+                <div class="projects-grid">
+                    <article class="project-card" data-popup="project1">
+                        <img src="assets/images/pp.jpg" alt="Projet 1">
+                        <div class="project-overlay">
+                            <h3>Projet 1</h3>
+                            <span>Application Web</span>
+                        </div>
+                    </article>
 
-                    <p>Contenu à venir...</p>
-                </div>
+                    <article class="project-card" data-popup="project2">
+                        <img src="assets/images/pp.jpg" alt="Projet 2">
+                        <div class="project-overlay">
+                            <h3>Projet 2</h3>
+                            <span>Site vitrine</span>
+                        </div>
+                    </article>
 
-                <div id="projet2">
-                    <h2>PROJEKT 2</h2>
-
-                    <p>Contenu à venir...</p>
-                </div>
-
-                <div id="projet3">
-                    <h2>MON PROJET DE RÊVE</h2>
-
-                    <p>Un site pour noter et partager des musiques, playlists et albums !</p>
+                    <article class="project-card" data-popup="project3">
+                        <img src="assets/images/pp.jpg" alt="Projet musical">
+                        <div class="project-overlay">
+                            <h3>Projet de rêve</h3>
+                            <span>Plateforme musicale</span>
+                        </div>
+                    </article>
                 </div>
 
             </section>
+
+            <div class="popup" id="project1">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Projet 1 – Application Web</h3>
+                    <p>
+                        Description du projet, contexte, objectifs, technologies utilisées.
+                    </p>
+                    <img src="assets/images/pp.jpg" alt="Capture projet 1">
+                </div>
+            </div>
+
+            <div class="popup" id="project2">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Projet 2 – Site vitrine</h3>
+                    <p>
+                        Site réalisé en HTML, CSS et JS.
+                    </p>
+                    <img src="assets/images/projet2-screen.jpg" alt="Capture projet 2">
+                </div>
+            </div>
+
+            <div class="popup" id="project3">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Mon projet de rêve 🎵</h3>
+                    <p>
+                        Une plateforme pour noter, partager et découvrir des musiques,
+                        playlists et albums.
+                    </p>
+                    <img src="assets/images/projet3-screen.jpg" alt="Capture projet 3">
+                </div>
+            </div>
+
+
         </div>
     </main>
 
@@ -381,7 +425,7 @@
         </div>
 
         <div class="footer-bottom">
-            © 2025-2026 - NOM PRENOM — Tous droits réservés.
+            © 2026-2027 - NOM PRENOM — Tous droits réservés.
             <a href="#">Mentions légales</a>
         </div>
     </footer>

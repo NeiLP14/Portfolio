@@ -52,3 +52,28 @@ document.querySelectorAll(".popup").forEach(popup => {
     });
 });
 
+
+const projectCards = document.querySelectorAll(".project-card");
+const popups = document.querySelectorAll(".popup");
+const closeBtns = document.querySelectorAll(".popup .close-btn");
+
+projectCards.forEach(card => {
+    card.addEventListener("click", () => {
+        const popupId = card.getAttribute("data-popup");
+        document.getElementById(popupId).classList.add("active");
+    });
+});
+
+closeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.closest(".popup").classList.remove("active");
+    });
+});
+
+popups.forEach(popup => {
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+        }
+    });
+});
