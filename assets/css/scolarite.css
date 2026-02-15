@@ -1,147 +1,149 @@
-/* -------------------------------------------- */
-/* SECTIONS GLOBALES */
-/* -------------------------------------------- */
+/* ============================= */
+/* SECTION SCOLARITÉ */
+/* ============================= */
 
 .scolarite {
-    padding: 80px 10%;
+    padding: 70px 8%;
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    position: relative;
+    gap: 40px; /* réduit l’espace vertical */
 }
 
-/* Titre principal des blocs */
+/* TITRES */
 .scolarite h2 {
-    font-size: 32px;
-    letter-spacing: 3px;
+    font-size: 28px;
+    letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 25px;
     position: relative;
-    margin-bottom: 20px;
-    color: #fff;
 }
 
-/* Soulignage doré original */
 .scolarite h2::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -8px;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #d4af37, #ffdd55);
-    border-radius: 4px;
+    bottom: -6px;
+    width: 50px;
+    height: 3px;
+    background: #d4af37;
+    border-radius: 3px;
 }
 
-/* Paragraphes */
-.scolarite p {
-    max-width: 700px;
-    line-height: 1.8;
-    opacity: 0.85;
-}
-
-/* Conteneurs internes */
-.scolarite > div {
-    padding: 40px 30px;
-    border-left: 3px solid #d4af37;
-    background: rgba(255,255,255,0.03);
-    border-radius: 8px;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-/* -------------------------------------------- */
-/* RESPONSIVE */
-/* -------------------------------------------- */
-@media (max-width: 768px) {
-    .scolarite {
-        padding: 60px 6%;
-    }
-
-    .scolarite h2 {
-        font-size: 26px;
-    }
-
-    .scolarite > div {
-        padding: 30px 22px;
-    }
-}
-
-/* ---------------------------- */
-/* TIMELINE PARCOURS - ADJUSTED */
-/* ---------------------------- */
+/* ============================= */
+/* TIMELINE MODERNE */
+/* ============================= */
 
 .timeline {
     position: relative;
-    margin-top: 40px;
-    padding-left: 40px;
+    padding-left: 30px;
+    margin-top: 20px;
 }
 
 .timeline::before {
     content: "";
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 0;
-    width: 4px;
+    width: 2px; /* plus fin */
     height: 100%;
-    border-radius: 2px;
+    background: #d4af37;
 }
 
+/* ITEM */
 .timeline-item {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 35px; /* réduit l’espace */
 }
 
+/* POINT */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: #d4af37;
+    border-radius: 50%;
+}
+
+/* CONTENU */
 .timeline-content {
-    background: rgba(255,255,255,0.05);
-    padding: 20px 25px;
-    border-radius: 10px;
-    border-left: 3px solid #d4af37;
-    transition: transform 0.3s ease, background 0.3s ease;
+    background: rgba(255,255,255,0.04);
+    padding: 16px 20px; /* plus compact */
+    border-radius: 8px;
+    transition: 0.3s ease;
 }
 
 .timeline-content:hover {
-    transform: translateX(8px);
     background: rgba(255,255,255,0.08);
+    transform: translateX(5px);
 }
 
 .timeline-content h3 {
-    margin-bottom: 10px;
-    color: #fff;
-    font-size: 22px;
-    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 6px;
 }
 
 .timeline-content p {
-    opacity: 0.85;
-}
-
-/* Stage bloc */
-.timeline-content .stage {
-    margin-top: 15px;
-    padding: 15px;
-    border-left: 2px solid #222;
-    background: rgba(255,255,255,0.06);
-    border-radius: 6px;
-}
-
-.timeline-content .stage h4 {
-    font-size: 18px;
-    color: #d4af37;
+    font-size: 14px;
+    opacity: 0.8;
     margin-bottom: 8px;
-    letter-spacing: 1px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* STAGE PLUS COMPACT */
+.stage {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.stage h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #d4af37;
+}
+
+/* ============================= */
+/* BLOCS STAGE / ALTERNANCE */
+/* ============================= */
+
+#stage1,
+#alternance {
+    padding: 25px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    transition: 0.3s ease;
+}
+
+#stage1:hover,
+#alternance:hover {
+    background: rgba(255,255,255,0.07);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .scolarite {
+        padding: 50px 6%;
+        gap: 30px;
+    }
+
     .timeline {
-        padding-left: 25px;
+        padding-left: 20px;
     }
 
     .timeline::before {
-        left: 12px;
+        left: 6px;
     }
 
-    .timeline-marker {
-        left: -4px;
+    .timeline-item::before {
+        left: -6px;
     }
 }
