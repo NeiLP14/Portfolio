@@ -1,38 +1,52 @@
+/* ============================= */
 /* SECTION GLOBALE */
+/* ============================= */
+
 .presentation-section {
-    padding: 80px 10%;
+    padding: clamp(40px, 6vw, 100px) 8%;
     background: #f5f5f5;
     color: #111;
 }
 
+/* ============================= */
 /* GRID PRINCIPAL */
+/* ============================= */
+
 .presentation-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
+    gap: clamp(30px, 5vw, 80px);
     align-items: start;
 }
 
+/* ============================= */
 /* TITRE */
+/* ============================= */
+
 .presentation-left h2 {
-    font-size: 48px;
+    font-size: clamp(32px, 5vw, 52px);
     margin-bottom: 10px;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 20px);
     color: #d32f2f;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .description {
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     line-height: 1.6;
     margin-bottom: 25px;
+    max-width: 550px;
 }
 
+/* ============================= */
 /* STACK TAGS */
+/* ============================= */
+
 .stack {
     display: flex;
     flex-wrap: wrap;
@@ -46,23 +60,36 @@
     padding: 8px 14px;
     border-radius: 30px;
     font-size: 14px;
+    transition: 0.2s ease;
 }
 
+.stack span:hover {
+    background: #d32f2f;
+}
+
+/* ============================= */
 /* BOUTONS */
+/* ============================= */
+
 .cta-buttons {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-.btn-primary {
-    background: #d32f2f;
-    color: #fff;
+.btn-primary,
+.btn-secondary {
     padding: 12px 22px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #d32f2f;
+    color: #fff;
 }
 
 .btn-primary:hover {
@@ -73,11 +100,7 @@
 .btn-secondary {
     background: #fff;
     color: #111;
-    padding: 12px 22px;
-    border-radius: 10px;
-    text-decoration: none;
     border: 2px solid #111;
-    transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -85,10 +108,13 @@
     color: #fff;
 }
 
+/* ============================= */
 /* CARDS DROITE */
+/* ============================= */
+
 .card {
     background: #fff;
-    padding: 25px;
+    padding: clamp(18px, 2vw, 28px);
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     margin-bottom: 25px;
@@ -98,7 +124,10 @@
     margin-bottom: 12px;
 }
 
+/* ============================= */
 /* INTEREST TAGS */
+/* ============================= */
+
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -112,14 +141,76 @@
     font-size: 14px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+/* ============================= */
+/* TABLETTE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
     .presentation-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
     }
 
-    .presentation-left h2 {
-        font-size: 36px;
+    .presentation-left {
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stack {
+        justify-content: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .presentation-section {
+        padding: 50px 6%;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .stack span {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .card {
+        text-align: center;
+    }
+}
+
+/* ============================= */
+/* TRÈS GRANDS ÉCRANS */
+/* ============================= */
+
+@media (min-width: 1600px) {
+
+    .presentation-grid {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .description {
+        font-size: 20px;
     }
 }
