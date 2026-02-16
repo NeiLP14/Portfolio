@@ -34,6 +34,13 @@
   outline: none;
 }
 
+.accueil a {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
 /* --- Logo animé --- */
 .logo {
@@ -78,9 +85,6 @@
     text-align: center;
 }
 
-
-
-
 .header svg {
     width: 25px;
     height: 25px;
@@ -97,9 +101,6 @@
     cursor: pointer;
     font-size: 20px;
 }
-
-
-
 
 /* ---- MENU LATERAL ---- */
 .side-menu {
