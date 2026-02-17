@@ -44,7 +44,6 @@ const projectsData = {
         title: "MC-3S",
         description: "",
         images: [
-            "assets/images/mc3s_logo.png",
             "assets/images/mc3s_accueil.png",
             "assets/images/mc3s_garantie.png",
             "assets/images/mc3s_profil.png"
@@ -93,21 +92,71 @@ window.addEventListener("click", (e) => {
 const viewer = document.getElementById("image-viewer");
 const viewerImg = document.getElementById("viewer-img");
 const viewerClose = document.querySelector(".viewer-close");
+const prevArrow = document.querySelector(".viewer-arrow.left");
+const nextArrow = document.querySelector(".viewer-arrow.right");
 
-// Ouvre l'image en plein écran
+let currentImages = [];
+let currentIndex = 0;
+
+// Ouvre image et récupère toutes les images de la modal active
 document.addEventListener("click", function(e) {
-    if (e.target.closest(".modal-images img")) {
-        viewerImg.src = e.target.src;
+    const clickedImg = e.target.closest(".modal-images img");
+    if (clickedImg) {
+
+        currentImages = Array.from(
+            document.querySelectorAll(".modal-images img")
+        );
+
+        currentIndex = currentImages.indexOf(clickedImg);
+
+        viewerImg.src = clickedImg.src;
         viewer.classList.add("active");
     }
 });
 
-// Fermer en cliquant sur X
+// Fonction afficher image
+function showImage(index) {
+    if (index >= 0 && index < currentImages.length) {
+        currentIndex = index;
+        viewerImg.src = currentImages[currentIndex].src;
+    }
+}
+
+// Flèche droite
+nextArrow.addEventListener("click", () => {
+    let newIndex = (currentIndex + 1) % currentImages.length;
+    showImage(newIndex);
+});
+
+// Flèche gauche
+prevArrow.addEventListener("click", () => {
+    let newIndex =
+        (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImage(newIndex);
+});
+
+// Navigation clavier
+document.addEventListener("keydown", (e) => {
+    if (!viewer.classList.contains("active")) return;
+
+    if (e.key === "ArrowRight") {
+        nextArrow.click();
+    }
+
+    if (e.key === "ArrowLeft") {
+        prevArrow.click();
+    }
+
+    if (e.key === "Escape") {
+        viewer.classList.remove("active");
+    }
+});
+
+// Fermer
 viewerClose.addEventListener("click", () => {
     viewer.classList.remove("active");
 });
 
-// Fermer en cliquant en dehors de l'image
 viewer.addEventListener("click", (e) => {
     if (e.target === viewer) {
         viewer.classList.remove("active");
