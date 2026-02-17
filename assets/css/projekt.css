@@ -98,3 +98,167 @@
     height: 3px;
     background: #d32f2f;
 }
+
+/* -------------------------------------------- */
+/* MODAL – STYLE CINÉMATIQUE */
+/* -------------------------------------------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    padding: 40px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Contenu */
+.modal-content {
+    background: #111;
+    color: #fff;
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 50px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    animation: modalFade 0.4s ease;
+}
+
+/* Animation cinématique */
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Bouton fermer */
+.modal .close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #d4af37;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.modal .close:hover {
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/* Titre */
+.modal-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Ligne graphique sous titre */
+.modal-content h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #d32f2f;
+    margin-top: 15px;
+}
+
+/* Description */
+.modal-content p {
+    margin-top: 25px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* Galerie images */
+.modal-images {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.modal-images img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(0.9) contrast(1.05);
+}
+
+.modal-images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+/* -------------------------------------------- */
+/* IMAGE VIEWER – FULLSCREEN */
+/* -------------------------------------------- */
+
+.image-viewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    animation: fadeViewer 0.3s ease;
+}
+
+.image-viewer.active {
+    display: flex;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+.viewer-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #d4af37;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.viewer-close:hover {
+    transform: rotate(90deg);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeViewer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
