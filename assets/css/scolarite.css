@@ -8,6 +8,12 @@
   --border-soft: #2a2a2f;
 }
 
+#scolarite h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
 /* ===========================
    SECTION PARCOURS DEV
 =========================== */
