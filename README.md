@@ -4,6 +4,11 @@ TODO :
 - Alternance deuxième année
 
 
-- Projet 1 : Portfolio
-- Projet 2 : W2G
+- Projet : Portfolio
+- Projet : W2G
 - The Cover Game
+
+- Faire les popup pour les projets avec :
+    - infos 
+    - images (caroussel)
+    
