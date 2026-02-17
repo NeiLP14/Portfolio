@@ -112,16 +112,45 @@
 /* CARDS DROITE */
 /* ============================= */
 
+.card-container {
+    perspective: 1000px;
+    margin-bottom: 25px;
+}
+
 .card {
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover .card {
+    transform: rotateX(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: #fff;
     padding: clamp(18px, 2vw, 28px);
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
+    backface-visibility: hidden;
 }
 
-.card h3 {
-    margin-bottom: 12px;
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-back {
+    transform: rotateX(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* ============================= */
