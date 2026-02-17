@@ -48,6 +48,15 @@ const projectsData = {
             "assets/images/mc3s_garantie.png",
             "assets/images/mc3s_profil.png"
         ]
+    },
+    "covergame": {
+        title: "The Cover Game (Bêta)",
+        description: "",
+        images: [
+            "assets/images/TCG_accueil.png",
+            "assets/images/TCG_game1.png",
+            "assets/images/TCG_game2.png"
+        ]
     }
 };
 
