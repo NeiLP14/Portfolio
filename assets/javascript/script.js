@@ -33,19 +33,21 @@ closeBtn.addEventListener('click', () => {
 const projectsData = {
     "mc-elec": {
         title: "MC-Elec",
-        description: "Application web locale développée pour une entreprise. Gestion des interventions, base de données clients et interface sécurisée.",
+        description: "",
         images: [
             "assets/images/mcelec_accueil.png",
             "assets/images/mcelec_bb_form.png",
             "assets/images/mcelec_bb_results.png"
         ]
     },
-    "covergame": {
-        title: "The Cover Game",
-        description: "Mini jeu web développé en JavaScript. Système de score, animations et logique de jeu personnalisée.",
+    "mc-3s": {
+        title: "MC-3S",
+        description: "",
         images: [
-            "assets/images/game1.png",
-            "assets/images/game2.png"
+            "assets/images/mc3s_logo.png",
+            "assets/images/mc3s_accueil.png",
+            "assets/images/mc3s_garantie.png",
+            "assets/images/mc3s_profil.png"
         ]
     }
 };

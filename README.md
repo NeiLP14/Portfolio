@@ -7,8 +7,6 @@ TODO :
 - Projet : W2G
 - The Cover Game
 
-- Faire les popup pour les projets avec :
-    - infos 
-    - images (caroussel)
+- Ajouter des descriptions aux projets
     
 - Tableau E5
