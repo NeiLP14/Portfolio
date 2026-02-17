@@ -6,3 +6,8 @@ TODO :
 - Ajouter des descriptions aux projets
     
 - Tableau E5
+
+- Partie "Me contacter"
+
+- Mentions légales
+- Politique de confidentialité
