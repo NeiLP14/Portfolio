@@ -1,9 +1,5 @@
 TODO :
 
-- Stage première année
-- Alternance deuxième année
-
-- Projet : Portfolio
 - Projet : W2G
 - The Cover Game
 
