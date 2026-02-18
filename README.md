@@ -10,4 +10,5 @@ TODO :
 - Partie "Me contacter"
 
 - Mentions légales
-- Politique de confidentialité
+    - Hébergement
+    - Nom prénom
