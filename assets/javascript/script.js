@@ -33,7 +33,7 @@ closeBtn.addEventListener('click', () => {
 const projectsData = {
     "mc-elec": {
         title: "MC-Elec",
-        description: "",
+        description: "MC-Elec est un configurateur électrique pour la socété Mauguin Citagri. Il est développé en HTML/CSS et JavaScript. Il suffit de remplir un formulaire avec des propositions, qui représentent des options sur une Tonne à lisier, les choix fait sont reliés à un fichier javascript qui permet de sortir les composants nécessaires pour la tonne ainsi que les schémas électriques nécessaires.",
         images: [
             "assets/images/mcelec_accueil.png",
             "assets/images/mcelec_bb_form.png",
@@ -42,7 +42,7 @@ const projectsData = {
     },
     "mc-3s": {
         title: "MC-3S",
-        description: "",
+        description: "MC-3S est un site web servant de portail numérique pour la société Mauguin Citagri. Il est développé avec le CMS Drupal, et contient un formulaire de garantie ainsi que le configurateur électrique MC-Elec.",
         images: [
             "assets/images/mc3s_accueil.png",
             "assets/images/mc3s_garantie.png",
@@ -51,7 +51,7 @@ const projectsData = {
     },
     "covergame": {
         title: "The Cover Game (Bêta)",
-        description: "",
+        description: "The Cover Game est un petit jeu web developpé en PHP, HTML/CSS et Javascript. Le but du jeu est de trouvé le plus rapidement une affiche de films, séries, animés, jeux vidéo, ect ...",
         images: [
             "assets/images/TCG_accueil.png",
             "assets/images/TCG_game1.png",
