@@ -171,3 +171,24 @@ viewer.addEventListener("click", (e) => {
         viewer.classList.remove("active");
     }
 });
+
+// PARTIE TABLEAU E5 //
+function ouvrirPopup() {
+  document.getElementById("popupMdp").style.display = "flex";
+}
+
+function fermerPopup() {
+  document.getElementById("popupMdp").style.display = "none";
+  document.getElementById("erreurMdp").innerText = "";
+  document.getElementById("champMdp").value = "";
+}
+
+function verifierMotDePasse() {
+  var mdp = document.getElementById("champMdp").value;
+
+  if (mdp === "MonTabl€auE5") { // ← ton mot de passe ici
+    window.location.href = "tableau_E5.html";
+  } else {
+    document.getElementById("erreurMdp").innerText = "Mot de passe incorrect";
+  }
+}

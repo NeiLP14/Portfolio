@@ -174,7 +174,7 @@
 
                         <div class="cta-buttons">
                             <a href="/assets/pdf/mon_CV.pdf" download class="btn-primary">Télécharger mon CV</a>
-                            <a href="#" download class="btn-secondary">Tableau E5</a>
+                            <a href="#" class="btn-secondary" onclick="ouvrirPopup()">Tableau E5</a>
                         </div>
                     </div>
 
@@ -307,7 +307,7 @@
             <div class="footer-col">
                 <h4>Téléchargements</h4>
                 <a href="/assets/pdf/mon_CV.pdf" download>CV</a>
-                <a href="#" download>Tableau E5</a>
+                <a href="#" onclick="ouvrirPopup()">Tableau E5</a>
             </div>
 
             <!-- Colonne 4 -->
@@ -332,6 +332,23 @@
             <a href="mentions-legales.html">Mentions légales</a>
         </div>
     </footer>
+
+    <!-- POPUP MOT DE PASSE -->
+    <div id="popupMdp" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Accès sécurisé</h2>
+            <p>Veuillez entrer le mot de passe</p>
+            
+            <input type="password" id="champMdp" placeholder="Mot de passe">
+            
+            <div class="popup-buttons">
+            <button onclick="verifierMotDePasse()">Valider</button>
+            <button class="close-btn" onclick="fermerPopup()">Annuler</button>
+            </div>
+            
+            <p id="erreurMdp" class="erreur"></p>
+        </div>
+    </div>
 
     <div class="modal" id="project-modal">
         <div class="modal-content">
