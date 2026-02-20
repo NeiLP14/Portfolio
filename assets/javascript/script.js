@@ -193,10 +193,6 @@ function verifierMotDePasse() {
   }
 }
 
-
-
-
-
 /* INTERETS */
 const Interetsmodal = document.getElementById("interestModal");
 const InteretsmodalTitle = document.getElementById("modalTitle");
