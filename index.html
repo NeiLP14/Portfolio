@@ -154,12 +154,12 @@
                         <div class="card interests">
                             <h3>Centres d’intérêt</h3>
                             <div class="tags">
-                                <span>🎵 Linkin Park</span>
-                                <span>🎵 Columbine</span>
-                                <span>🎬 Mademoiselle</span>
-                                <span>🎬 Arcane</span>
-                                <span>🎮 Cyberpunk 2077</span>
-                                <span>🎮 The Last of Us Part II</span>
+                                <span class="interest" data-interest="linkinpark">🎵 Linkin Park</span>
+                                <span class="interest" data-interest="columbine">🎵 Columbine</span>
+                                <span class="interest" data-interest="mademoiselle">🎬 Mademoiselle</span>
+                                <span class="interest" data-interest="arcane">🎬 Arcane</span>
+                                <span class="interest" data-interest="cyberpunk">🎮 Cyberpunk 2077</span>
+                                <span class="interest" data-interest="tlou2">🎮 The Last of Us Part II</span>
                             </div>
                         </div>
 
@@ -332,6 +332,15 @@
             <a href="mentions-legales.html">Mentions légales</a>
         </div>
     </footer>
+
+    <!-- POPUP INTERETS -->
+    <div class="modal" id="interestModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+        </div>
+    </div>
 
     <!-- POPUP MOT DE PASSE -->
     <div id="popupMdp" class="popup-overlay">

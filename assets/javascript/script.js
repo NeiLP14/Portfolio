@@ -192,3 +192,58 @@ function verifierMotDePasse() {
     document.getElementById("erreurMdp").innerText = "Mot de passe incorrect";
   }
 }
+
+
+
+
+
+/* INTERETS */
+const Interetsmodal = document.getElementById("interestModal");
+const InteretsmodalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const InteretscloseBtn = document.querySelector(".close");
+const interests = document.querySelectorAll(".interest");
+
+const content = {
+    linkinpark: {
+        title: "🎵 Linkin Park",
+        text: "Groupe de rock alternatif formé en 1996, connu pour son mélange de nu metal, rap et électro."
+    },
+    columbine: {
+        title: "🎵 Columbine",
+        text: "Groupe de rap français mêlant introspection, esthétique sombre et univers visuel fort."
+    },
+    mademoiselle: {
+        title: "🎬 Mademoiselle",
+        text: "Film sud-coréen réalisé par Park Chan-wook, connu pour son esthétique et sa narration complexe."
+    },
+    arcane: {
+        title: "🎬 Arcane",
+        text: "Série animée inspirée de l’univers de League of Legends, reconnue pour sa qualité visuelle exceptionnelle."
+    },
+    cyberpunk: {
+        title: "🎮 Cyberpunk 2077",
+        text: "RPG futuriste en monde ouvert développé par CD Projekt Red, avec un univers cyberpunk immersif."
+    },
+    tlou2: {
+        title: "🎮 The Last of Us Part II",
+        text: "Jeu narratif intense explorant la vengeance, la morale et la survie dans un monde post-apocalyptique."
+    }
+};
+
+interests.forEach(item => {
+    item.addEventListener("click", () => {
+        const key = item.getAttribute("data-interest");
+        InteretsmodalTitle.textContent = content[key].title;
+        modalText.textContent = content[key].text;
+        Interetsmodal.style.display = "flex";
+    });
+});
+
+InteretscloseBtn.onclick = () => Interetsmodal.style.display = "none";
+
+window.onclick = (e) => {
+    if (e.target === Interetsmodal) {
+        Interetsmodal.style.display = "none";
+    }
+};
