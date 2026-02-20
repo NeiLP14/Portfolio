@@ -186,7 +186,7 @@ function fermerPopup() {
 function verifierMotDePasse() {
   var mdp = document.getElementById("champMdp").value;
 
-  if (mdp === "MonTabl€auE5") { // ← ton mot de passe ici
+  if (mdp === VAR_MDP) {
     window.location.href = "tableau_E5.html";
   } else {
     document.getElementById("erreurMdp").innerText = "Mot de passe incorrect";
@@ -240,6 +240,7 @@ interests.forEach(item => {
     });
 });
 
+VAR_MDP = "MonTabl€auE5";
 InteretscloseBtn.onclick = () => Interetsmodal.style.display = "none";
 
 window.onclick = (e) => {
