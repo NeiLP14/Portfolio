@@ -257,7 +257,7 @@ interests.forEach(item => {
     });
 });
 
-VAR_MDP = "MonTabl€auE5";
+VAR_MDP = "Achang€r2026";
 InteretscloseBtn.onclick = () => Interetsmodal.style.display = "none";
 
 window.onclick = (e) => {

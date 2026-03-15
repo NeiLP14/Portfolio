@@ -1,10 +1,6 @@
 TODO :
 
-- Mettre les infos perso
-
-- Mettre de vrais images pour les projets et la PP
-
-- Projet : W2G
+- Projet : W2G Desktop images
 
 - Tableau E5
 
