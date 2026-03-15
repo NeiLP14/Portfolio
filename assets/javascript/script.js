@@ -57,6 +57,27 @@ const projectsData = {
             "assets/images/TCG_game1.png",
             "assets/images/TCG_game2.png"
         ]
+    },
+    "w2g_leger": {
+        title: "Work Together Léger",
+        description: "Work Together Léger est un projet de fin d'année de BTS. Il s'agit d'une application web permettant de gérer les tâches et les projets d'une équipe.",
+        images: [
+            "assets/images/W2GL_accueil.png",
+            "assets/images/W2GL_offres.png",
+            "assets/images/W2GL_login.png",
+            "assets/images/W2GL_commande.png",
+            "assets/images/W2GL_profil.png",
+            "assets/images/W2GL_baies.png",
+            "assets/images/W2GL_config.png",
+            "assets/images/W2GL_interventions.png"
+        ]
+    },
+    "w2g_desktop": {
+        title: "Work Together Desktop",
+        description: "Work Together Desktop est un projet de fin d'année de BTS. Il s'agit d'une application web permettant de gérer les tâches et les projets d'une équipe.",
+        images: [
+            
+        ]
     }
 };
 
