@@ -265,3 +265,19 @@ window.onclick = (e) => {
         Interetsmodal.style.display = "none";
     }
 };
+
+const toggleBtn = document.getElementById("theme-toggle");
+const themeLink = document.getElementById("theme-style");
+
+let cyberpunk = false;
+
+toggleBtn.addEventListener("click", () => {
+    if (!cyberpunk) {
+        themeLink.href = "assets/css/cyberpunk.css";
+        toggleBtn.textContent = "MODE NORMAL";
+    } else {
+        themeLink.href = "assets/css/style.css";
+        toggleBtn.textContent = "CYBERPUNK MODE";
+    }
+    cyberpunk = !cyberpunk;
+});

@@ -126,3 +126,48 @@
         justify-content: center;
     }
 }
+
+/* ===== BOUTON CYBERPUNK DISCRET ===== */
+.theme-btn {
+    margin-top: 10px;
+    padding: 6px 10px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    background: transparent;
+    border: 1px solid transparent;
+
+    color: rgba(255, 255, 255, 0.2); /* quasi invisible */
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* léger hint comme les liens */
+.theme-btn:hover {
+    color: #ff3b3b; /* reste cohérent footer */
+    transform: translateX(6px);
+}
+
+/* ===== MODE "SECRET ACTIVÉ" (hover prolongé stylé) ===== */
+.theme-btn:focus,
+.theme-btn:active {
+    color: #ffe600;
+
+    border: 1px solid #00d4ff;
+
+    background: linear-gradient(90deg, #000, #0a0a0a);
+
+    box-shadow:
+        0 0 10px #00d4ff,
+        0 0 20px rgba(0, 212, 255, 0.6),
+        inset 0 0 10px rgba(255, 230, 0, 0.2);
+
+    text-shadow:
+        0 0 5px #ffe600,
+        0 0 10px #ffe600;
+
+    transform: scale(1.05);
+}
