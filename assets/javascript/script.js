@@ -100,7 +100,7 @@ const modal = document.getElementById("project-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalDescription = document.getElementById("modal-description");
 const modalImages = document.getElementById("modal-images");
-const closePopupBtn = document.querySelector(".close");
+const closeProjectBtn = document.getElementById("close-project");
 
 document.querySelectorAll(".project-card").forEach(card => {
     card.addEventListener("click", () => {
@@ -123,10 +123,12 @@ document.querySelectorAll(".project-card").forEach(card => {
     });
 });
 
-closePopupBtn.addEventListener("click", () => {
+// Fermer avec la croix
+closeProjectBtn.addEventListener("click", () => {
     modal.classList.remove("active");
 });
 
+// Fermer en cliquant en dehors
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.classList.remove("active");
@@ -233,7 +235,7 @@ function verifierMotDePasse() {
 const Interetsmodal = document.getElementById("interestModal");
 const InteretsmodalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
-const InteretscloseBtn = document.querySelector(".close");
+const InteretscloseBtn = document.querySelector("#interestModal .close");
 const interests = document.querySelectorAll(".interest");
 
 const content = {
