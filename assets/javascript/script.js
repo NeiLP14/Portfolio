@@ -76,7 +76,11 @@ const projectsData = {
         title: "Work Together Desktop",
         description: "Work Together Desktop est un projet de fin d'année de BTS. Il s'agit d'une application web permettant de gérer les tâches et les projets d'une équipe.",
         images: [
-            
+            "assets/images/W2GD_login.png",
+            "assets/images/W2GD_user.png",
+            "assets/images/W2GD_modifuser.png",
+            "assets/images/W2GD_intervention.png",
+            "assets/images/W2GD_baie.png"
         ]
     }
 };
