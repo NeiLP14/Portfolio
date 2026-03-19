@@ -127,17 +127,33 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 32px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
-    color: #111;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
 }
 
-.close-btn:hover {
-    opacity: 1;
+/* On isole la croix */
+.close-btn span {
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1;
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
+/* Hover = rotation de la croix seulement */
+.close-btn:hover span {
+    transform: rotate(90deg);
+}
 
 /* ---- BLOCS DU MENU ---- */
 .menu-block {
