@@ -60,7 +60,7 @@ const projectsData = {
     },
     "w2g_leger": {
         title: "Work Together Léger",
-        description: "Work Together Léger est un projet de fin d'année de BTS. Il s'agit d'une application web permettant de gérer les tâches et les projets d'une équipe.",
+        description: "Work Together Léger est un projet de fin d'année de BTS. Il s'agit d'une application web permettant à des clients d'acheter des unités.",
         images: [
             "assets/images/W2GL_accueil.png",
             "assets/images/W2GL_offres.png",
@@ -74,7 +74,7 @@ const projectsData = {
     },
     "w2g_desktop": {
         title: "Work Together Desktop",
-        description: "Work Together Desktop est un projet de fin d'année de BTS. Il s'agit d'une application web permettant de gérer les tâches et les projets d'une équipe.",
+        description: "Work Together Desktop est un projet de fin d'année de BTS. Il s'agit d'une application C# qui permet aux staff de l'application d'accèder à différents services.",
         images: [
             "assets/images/W2GD_login.png",
             "assets/images/W2GD_user.png",
