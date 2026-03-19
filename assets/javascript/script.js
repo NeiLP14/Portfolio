@@ -82,6 +82,17 @@ const projectsData = {
             "assets/images/W2GD_intervention.png",
             "assets/images/W2GD_baie.png"
         ]
+    },
+    "portfolio": {
+        title: "Portfolio",
+        description: "Portfolio est un projet personnel visant à présenter mes compétences et mes réalisations.",
+        images: [
+            "assets/images/portfolio1.png",
+            "assets/images/portfolio2.png",
+            "assets/images/portfolio3.png",
+            "assets/images/portfolio4.png",
+            "assets/images/portfolio5.png"
+        ]
     }
 };
 
