@@ -1,17 +1,3 @@
-// CHRONO POUR LE TITLE //
-let startTime = Date.now();
-
-let storedSeconds = localStorage.getItem("timeSpent");
-let seconds = storedSeconds ? parseInt(storedSeconds) : 0;
-
-let interval = setInterval(updateTime, 1000);
-
-function updateTime() {
-    seconds++;
-    document.title = `Temps passé : ${seconds}s`;
-    localStorage.setItem("timeSpent", seconds);
-}
-
 // MENU BURGER //
 const menuBtn = document.querySelector('.menu');
 const sideMenu = document.getElementById('side-menu');
@@ -282,19 +268,3 @@ window.onclick = (e) => {
         Interetsmodal.style.display = "none";
     }
 };
-
-const toggleBtn = document.getElementById("theme-toggle");
-const themeLink = document.getElementById("theme-style");
-
-let cyberpunk = false;
-
-toggleBtn.addEventListener("click", () => {
-    if (!cyberpunk) {
-        themeLink.href = "assets/css/cyberpunk.css";
-        toggleBtn.textContent = "MODE NORMAL";
-    } else {
-        themeLink.href = "assets/css/style.css";
-        toggleBtn.textContent = "CYBERPUNK MODE";
-    }
-    cyberpunk = !cyberpunk;
-});
