@@ -13,6 +13,3 @@ expliquer tout les blocs de compétences pour chaque projet,
 changer les projets,
 changer le portfolio :
 	- la veille
-	- le pavé MC-3S
-	- la photo de profil
-	- enlever la partie "me contacter"

@@ -28,7 +28,7 @@ const projectsData = {
     },
     "mc-3s": {
         title: "MC-3S",
-        description: "Dans le cadre de mon alternance au sein de Mauguin Citagri, j’ai conçu et développé un portail numérique nommé MC-3S, destiné à centraliser plusieurs services internes de l’entreprise. Le site comprend une page d’accueil accessible à tous, présentant l’entreprise ainsi qu’une photographie de la façade des locaux. J’ai veillé à proposer une interface claire et intuitive afin de faciliter la navigation des utilisateurs. Le portail intègre également un module de demande de garantie, accessible uniquement aux membres identifiés externes à l’entreprise (hors service après-vente). Ce formulaire permet de renseigner différentes informations relatives à la tonne à lisier et au client, telles que les caractéristiques du matériel, le nombre d’heures d’utilisation, ainsi qu’une signature numérique. Il est également possible d’y ajouter des pièces jointes si nécessaire. Enfin, une troisième page permet d’accéder au configurateur électrique MC-Elec, que j’ai initialement développé lors de mon stage de première année, puis amélioré au début de mon alternance. Cet outil est exclusivement réservé au personnel du service après-vente et au bureau d’études, et permet de faciliter la configuration électrique des équipements. Ce projet me réconforte dans l’idée de continuer le développement Web, voir en faire un projet professionnel.",
+        description: "Dans le cadre de mon alternance au sein de Mauguin Citagri, j’ai conçu et développé un portail numérique nommé MC-3S, destiné à centraliser plusieurs services internes de l’entreprise. ",
         images: [
             "assets/images/mc3s_accueil.png",
             "assets/images/mc3s_garantie.png",
