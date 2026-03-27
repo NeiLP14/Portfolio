@@ -2,93 +2,52 @@
     padding: 60px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap; /* Permet l’adaptation sur petits écrans */
-}
-
-/* Texte */
-.intro-text {
-    flex: 1;
-    text-align: center;
-    min-width: 280px; /* Empêche le texte de devenir trop étroit */
-}
-
-.intro-text h1 {
-    color: #fff;
-    font-size: 42px;
-    text-shadow: 
-        0 0 8px #d32f2f,
-        0 0 14px #d32f2f,
-        0 0 24px #9f0000;
-    animation: pulse 1.8s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0%, 100% { text-shadow: 0 0 8px #d32f2f; }
-    50% { text-shadow: 0 0 18px #ff4d4d; }
-}
-
-
-.intro-text p {
-    font-size: 22px;
-}
-
-/* Image */
-.intro-img {
-    flex: 1;
-    display: flex;
     justify-content: center;
-    min-width: 280px;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
 }
 
-.intro-img img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Bloc texte */
+.intro-text {
+    max-width: 700px;
+    animation: fadeInUp 1s ease-out;
 }
 
-/* ----------------------------- */
-/* 📱 Écrans mobiles */
-/* ----------------------------- */
+/* Nom */
+.intro-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Sous-titre */
+.subtitle {
+    font-size: 20px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .intro-presentation {
-        flex-direction: column; 
-        padding: 40px 15px;
-        gap: 25px;
-    }
-
     .intro-text h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
-    .intro-text p {
+    .subtitle {
         font-size: 18px;
     }
 
-    .intro-img img {
-        max-width: 320px;
-    }
-}
-
-/* ----------------------------- */
-/* 🖥️ Très grands écrans (moniteurs larges) */
-/* ----------------------------- */
-@media (min-width: 1400px) {
-    .intro-presentation {
-        padding: 80px 10%;
-    }
-
-    .intro-text h1 {
-        font-size: 50px;
-    }
-
-    .intro-text p {
-        font-size: 24px;
-    }
-
-    .intro-img img {
-        max-width: 550px;
+    .description {
+        font-size: 16px;
     }
 }
