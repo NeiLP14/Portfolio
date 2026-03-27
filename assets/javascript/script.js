@@ -75,9 +75,7 @@ const projectsData = {
         images: [
             "assets/images/portfolio1.png",
             "assets/images/portfolio2.png",
-            "assets/images/portfolio3.png",
-            "assets/images/portfolio4.png",
-            "assets/images/portfolio5.png"
+            "assets/images/portfolio3.png"
         ]
     }
 };
