@@ -7,18 +7,3 @@ expliquer W2G,
 expliquer son rôle dans le projet,
 expliquer en mode gestion de projet (comment on à commencer),
 expliquer tout les blocs de compétences pour chaque projet,
-
-
-
-changer les projets,
-changer le portfolio :
-	- la veille
-
-pour les projets :
-
-- CoverGame : 
-	- mode projet -> faire une sorte de mode projet
-
-- W2G : 
-	- mode projet -> faire des taches
-	- répondre aux demandes -> faire des tickets
